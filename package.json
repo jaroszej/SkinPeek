@@ -8,5 +8,14 @@
     "node-cron": "3.0.0",
     "unofficial-valorant-api": "^2.3.1-stable.0"
   },
-  "type": "module"
+  "type": "module",
+  "scripts": {
+    "bot": "node SkinPeek.js",
+    "postinstall": "command -v pnpm >/dev/null 2>&1 && echo 'Using pnpm' || echo 'Using npm'",
+    "start": "command -v pnpm >/dev/null 2>&1 && pnpm start || npm start",
+    "build": "command -v pnpm >/dev/null 2>&1 && pnpm run build || npm run build",
+    "build:start": "command -v pnpm >/dev/null 2>&1 && pnpm run build:start || npm run build:start",
+    "clean": "rm -rf node_modules",
+    "reinstall": "rm -rf node_modules && command -v pnpm >/dev/null 2>&1 && pnpm install || npm install"
+  }
 }
